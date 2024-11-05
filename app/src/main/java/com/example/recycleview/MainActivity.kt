@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             rvDisaster.apply{
                 adapter = adapterDisaster
 //                layoutManager = LinearLayoutManager(this@MainActivity)
-                layoutManager = GridLayoutManager(this@MainActivity, 2)
+                layoutManager = GridLayoutManager(this@MainActivity, 3)
             }
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -37,12 +37,12 @@ class MainActivity : AppCompatActivity() {
     }
     fun generateDummy():List<Disaster>{
         return listOf(
-            Disaster(nameDisaster = "Tsunami", disasterType = "Natural") ,
-            Disaster(nameDisaster = "Earthquake", disasterType = "Natural"),
-            Disaster(nameDisaster = "Flood", disasterType = "Natural"),
-            Disaster(nameDisaster = "Wildfire", disasterType = "Natural"),
-            Disaster(nameDisaster = "Hurricane", disasterType = "Natural"),
-            Disaster(nameDisaster = "Chemical Spill", disasterType = "Man-made"),
+            Disaster(nameDisaster = "Tsunami" ) ,
+            Disaster(nameDisaster = "Earthquake"),
+            Disaster(nameDisaster = "Flood"),
+            Disaster(nameDisaster = "Wildfire"),
+            Disaster(nameDisaster = "Hurricane"),
+            Disaster(nameDisaster = "Chemical Spill"),
         )
     }
 }

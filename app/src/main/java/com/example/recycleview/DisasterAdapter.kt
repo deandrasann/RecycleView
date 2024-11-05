@@ -14,7 +14,6 @@ class DisasterAdapter(private val listDisaster : List<Disaster>, private val onC
             fun bind(data: Disaster){
                 with(binding){
                     txtDisasterName.text = data.nameDisaster
-
                     imgDisaster.setImageResource(data.getDisasterDrawable())
                     itemView.setOnClickListener{
                         onClickDisaster(data)
